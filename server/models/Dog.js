@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-let Dog = {};
+let DogModel = {};
 
 const DogSchema = new mongoose.Schema({
   name: {
@@ -17,7 +17,7 @@ const DogSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  
+
   age: {
     type: Number,
     min: 0,
@@ -47,7 +47,5 @@ DogModel = mongoose.model('Dog', DogSchema);
 
 
 // export our public properties
-module.exports = {
-  DogModel,
-  DogSchema,
-};
+module.exports.DogModel = DogModel;
+module.exports.DogSchema = DogSchema;
