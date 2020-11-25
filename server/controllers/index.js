@@ -22,10 +22,10 @@ let lastDogAdded = new Dog(defaultData);
 const hostIndex = (req, res) => {
   // res.render takes a name of a page to render.
   // These must be in the folder you specified as views in your main app.js file
-  // Additionally, you don't need .jade because you registered the
-  // file type in the app.js as jade. Calling res.render('index')
-  // actually calls index.jade. A second parameter of JSON can be passed
-  // into the jade to be used as variables with #{varName}
+  // Additionally, you don't need .handlebars because you registered the
+  // file type in the app.js as handlebars. Calling res.render('index')
+  // actually calls index.handlebars. A second parameter of JSON can be passed
+  // into the handlebars to be used as variables with {{varName}}
   res.render('index', {
     currentName: lastAdded.name,
     title: 'Home',
@@ -76,10 +76,10 @@ const hostPage1 = (req, res) => {
 const hostPage2 = (req, res) => {
   // res.render takes a name of a page to render.
   // These must be in the folder you specified as views in your main app.js file
-  // Additionally, you don't need .jade because you registered
-  // the file type in the app.js as jade. Calling res.render('index')
-  // actually calls index.jade. A second parameter of JSON can be
-  // passed into the jade to be used as variables with #{varName}
+  // Additionally, you don't need .handlebars because you registered
+  // the file type in the app.js as handlebars. Calling res.render('index')
+  // actually calls index.handlebars. A second parameter of JSON can be
+  // passed into the handlebars to be used as variables with #{varName}
   res.render('page2');
 };
 
@@ -89,10 +89,10 @@ const hostPage2 = (req, res) => {
 const hostPage3 = (req, res) => {
     // res.render takes a name of a page to render.
     // These must be in the folder you specified as views in your main app.js file
-    // Additionally, you don't need .jade because you registered the file type
-    // in the app.js as jade. Calling res.render('index')
-    // actually calls index.jade. A second parameter of JSON can be passed
-    // into the jade to be used as variables with #{varName}
+    // Additionally, you don't need .handlebars because you registered the file type
+    // in the app.js as handlebars. Calling res.render('index')
+    // actually calls index.handlebars. A second parameter of JSON can be passed
+    // into the handlebars to be used as variables with #{varName}
   res.render('page3');
 };
 
@@ -312,10 +312,10 @@ const updateLast = (req, res) => {
 const notFound = (req, res) => {
   // res.render takes a name of a page to render.
   // These must be in the folder you specified as views in your main app.js file
-  // Additionally, you don't need .jade because you registered the file type
-  // in the app.js as jade. Calling res.render('index')
-  // actually calls index.jade. A second parameter of JSON can be passed into
-  // the jade to be used as variables with #{varName}
+  // Additionally, you don't need .handlebars because you registered the file type
+  // in the app.js as handlebars. Calling res.render('index')
+  // actually calls index.handlebars. A second parameter of JSON can be passed into
+  // the handlebars to be used as variables with #{varName}
   res.status(404).render('notFound', {
     page: req.url,
   });
